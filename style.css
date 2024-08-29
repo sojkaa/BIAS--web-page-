@@ -17,4 +17,16 @@ p {
   font-size: 18px;
   line-height: 1.5;
   padding: 20px;
+planta {
+  width: 30%; /* Ajusta el ancho de cada sección de planta */
+  margin: 10px; /* Espacio entre las secciones */
+  padding: 10px;
+  border: 1px solid #ccc; /* Borde alrededor de cada sección */
+  float: left; /* Para que las secciones se muestren una al lado de la otra */
+}
+
+planta img {
+  width: 100%; /* La imagen ocupa todo el ancho de la sección */
+  height: auto;
+}
 }
