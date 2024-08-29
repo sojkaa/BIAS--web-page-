@@ -5,134 +5,176 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto: BIAS</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Restablecer estilos predeterminados */
+        * {
+            box-sizing: border-box;
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
+            padding: 0;
         }
 
-        h1, h2, h3 {
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
             color: #333;
         }
 
-        h1 {
+        /* Contenedor principal */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
             text-align: center;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        /* Imagen destacada */
+        .featured-image {
+            margin-bottom: 20px;
+        }
+
+        .featured-image img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        /* Sección de información */
+        .info-section {
             background-color: #fff;
             padding: 20px;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
+        .info-section h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        /* Sección del equipo */
+        .team-section {
+            background-color: #fff;
+            padding: 20px;
             border-radius: 5px;
         }
 
-        .star-rating {
-            color: #f39c12;
-            font-size: 20px;
-        }
-
         .team-members {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
 
         .team-member {
-            width: 45%;
-            margin: 10px;
-            box-sizing: border-box;
             text-align: center;
         }
 
         .team-member img {
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            width: 100px;
-            height: 100px;
             object-fit: cover;
             margin-bottom: 10px;
         }
 
-        @media (min-width: 768px) {
-            .team-member {
-                width: 20%; 
+        /* Llamado a la acción */
+        .cta-button {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        /* Diseño responsive */
+        @media (max-width: 768px) {
+            .team-members {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            .team-member img {
+                width: 100px;
+                height: 100px;
             }
         }
     </style>
 </head>
 <body>
 
+<header>
+    <h1>Proyecto: BIAS</h1>
+    <p>Silla de ruedas controlada por la mente</p>
+</header>
+
 <div class="container">
 
-    <h1>Proyecto: BIAS</h1>
-
-    <img src="images/tn.image.PNG" alt="Equipo BIAS"> 
-
-    <h2>Silla de ruedas Automática</h2>
-
-    <p>Eficiente e innovador</p>
-
-    <div class="star-rating">
-        ★★★★★
+    <div class="featured-image">
+        <img src="images/tn.image.PNG" alt="Equipo BIAS">
     </div>
 
-    <h3>¿Qué es BIAS?</h3>
+    <div class="info-section">
+        <h2>¿Qué es BIAS?</h2>
+        <p>BIAS es un proyecto innovador que busca transformar la vida de personas con discapacidades motoras mediante sillas de ruedas controladas por señales EEG.</p>
 
-    <p>BIAS es un proyecto innovador que busca transformar la vida de personas con discapacidades motoras mediante sillas de ruedas controladas por señales EEG.</p>
+        <h2>¿Cómo funciona?</h2>
+        <p>Un dispositivo capta la actividad cerebral y la traduce en comandos, permitiendo a los usuarios dirigir la silla con sus pensamientos. Avanzar, girar o detenerse es posible, todo con la fuerza de la mente.</p>
 
-    <h3>¿Cómo funciona?</h3>
+        <h2>¿Por qué elegimos este proyecto?</h2>
+        <p>Esta tecnología promete mayor independencia y una mejor calidad de vida para quienes enfrentan barreras de movilidad. Un futuro donde la mente lidera el camino está más cerca que nunca.</p>
 
-    <p>Un dispositivo capta la actividad cerebral y la traduce en comandos, permitiendo a los usuarios dirigir la silla con sus pensamientos. Avanzar, girar o detenerse es posible, todo con la fuerza de la mente.</p>
+        <a href="#" class="cta-button">Contáctanos</a> 
+    </div>
 
-    <h3>¿Por qué elegimos este proyecto?</h3>
+    <div class="team-section">
+        <h2>Miembros del equipo</h2>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="images/sojka.jpg" alt="Santiago Sojka">
+                <h4>Santiago Sojka</h4>
+                <p>Diseño de estructura y Marketing</p>
+            </div>
 
-    <p>Esta tecnología promete mayor independencia y una mejor calidad de vida para quienes enfrentan barreras de movilidad. Un futuro donde la mente lidera el camino está más cerca que nunca.</p>
+            <div class="team-member">
+                <img src="images/dani.jpg" alt="Danilo Diaz">
+                <h4>Danilo Diaz</h4>
+                <p>Trabajo en motores</p>
+            </div>
 
-    <h2>Miembros del equipo</h2>
+            <div class="team-member">
+                <img src="images/lucho.jpg" alt="Luciano Montenegro">
+                <h4>Luciano Montenegro</h4>
+                <p>Líder</p>
+            </div>
 
-    <div class="team-members">
-        <div class="team-member">
-            <img src="images/sojka.jpg" alt="Santiago Sojka">
-            <h4>Santiago Sojka</h4>
-            <p>Diseño de estructura y Marketing</p>
-        </div>
+            <div class="team-member">
+                <img src="images/soria.jpg" alt="Ian Gil Soria">
+                <h4>Ian Gil Soria</h4>
+                <p>Diseño de placas</p>
+            </div>
 
-        <div class="team-member">
-            <img src="images/dani.jpg" alt="Danilo Diaz">
-            <h4>Danilo Diaz</h4>
-            <p>Trabajo en motores</p>
-        </div>
+            <div class="team-member">
+                <img src="images/pela.jpg" alt="Luca Deblasi">
+                <h4>Luca Deblasi</h4>
+                <p>Programador de motores</p>
+            </div>
 
-        <div class="team-member">
-            <img src="images/lucho.jpg" alt="Luciano Montenegro">
-            <h4>Luciano Montenegro</h4>
-            <p>Líder</p>
-        </div>
-
-        <div class="team-member">
-            <img src="images/soria.jpg" alt="Ian Gil Soria">
-            <h4>Ian Gil Soria</h4>
-            <p>Diseño de placas</p>
-        </div>
-
-        <div class="team-member">
-            <img src="images/pela.jpg" alt="Luca Deblasi">
-            <h4>Luca Deblasi</h4>
-            <p>Programador de motores</p>
-        </div>
-
-        <div class="team-member">
-            <img src="images/fabi.jpg" alt="Nicolás Adel">
-            <h4>Nicolás Adel</h4>
-            <p>Programador de la IA</p>
+            <div class="team-member">
+                <img src="images/fabi.jpg" alt="Nicolás Adel">
+                <h4>Nicolás Adel</h4>
+                <p>Programador de la IA</p>
+            </div>
         </div>
     </div>
 
