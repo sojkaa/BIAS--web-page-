@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,118 +6,62 @@ body {
     background-color: #f4f4f4;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: white;
-}
-
-.menu-icon, .settings-icon {
-    font-size: 24px;
-}
-
-.equipo, .proyecto {
+section {
     padding: 20px;
+    max-width: 900px;
+    margin: auto;
     background-color: white;
     margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
-    text-align: center;
-    margin-bottom: 20px;
+h1, h2, h3 {
+    color: #333;
 }
 
-.matrix-image img {
+p {
+    color: #555;
+}
+
+/* Estilos de la sección del proyecto */
+#proyecto .content img {
+    width: 100%;
+    max-width: 600px;
     display: block;
     margin: 0 auto;
-    max-width: 100%;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
-.team-members {
+#proyecto .content {
+    text-align: center;
+}
+
+/* Estilos de la sección del equipo */
+.team-container {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .team-member {
     text-align: center;
     margin: 10px;
+    width: 150px;
 }
 
 .team-member img {
-    border-radius: 50%;
     width: 100px;
     height: 100px;
-    object-fit: cover;
+    border-radius: 50%;
 }
 
-.team-member p {
-    font-size: 14px;
-    margin-top: 10px;
-}
-
-.team-member span {
-    font-size: 12px;
-    color: gray;
-}
-
-.bias-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.bias-logo img {
-    width: 80px;
-    margin-right: 10px;
-}
-
-.btn {
-    display: inline-block;
-    background-color: #00aaff;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.project-details, .project-image {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.project-details img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.project-image img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
-}
-
-.subtitulo {
-    font-size: 18px;
+.team-member h3 {
+    margin: 10px 0 5px 0;
     color: #333;
 }
 
-.stars {
-    font-size: 24px;
-    color: gold;
-    margin-bottom: 10px;
-}
-
-.descripcion {
-    font-size: 14px;
-    text-align: left;
-    margin: 0 auto;
-    max-width: 600px;
-    line-height: 1.6;
+.team-member p {
+    margin: 0;
+    color: #666;
 }
