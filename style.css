@@ -1,32 +1,93 @@
 body {
   font-family: sans-serif;
-  background-color: #f0f0f0;
-  margin: 0;
-  padding: 0;
+  margin: 0; 
 }
 
-h1 {
-  text-align: center;
-  color: #333;
+header {
+  background-color: #f0f0f0; 
   padding: 20px;
-  background-color: #e0e0e0;
+  text-align: center; 
 }
 
-p {
-  text-align: center;
-  font-size: 18px;
-  line-height: 1.5;
-  padding: 20px;
-planta {
-  width: 30%; /* Ajusta el ancho de cada sección de planta */
-  margin: 10px; /* Espacio entre las secciones */
-  padding: 10px;
-  border: 1px solid #ccc; /* Borde alrededor de cada sección */
-  float: left; /* Para que las secciones se muestren una al lado de la otra */
+header h1 {
+  margin: 0; 
 }
 
-planta img {
-  width: 100%; /* La imagen ocupa todo el ancho de la sección */
-  height: auto;
+main {
+  padding: 20px; 
 }
+
+section {
+  margin-bottom: 30px; 
+}
+
+.imagen-principal {
+  border-radius: 10px; 
+  overflow: hidden; 
+  margin-bottom: 15px; 
+}
+
+.imagen-principal img {
+  width: 100%; 
+  height: auto; 
+}
+
+.imagen-principal h2 {
+  font-size: 24px; 
+  margin-bottom: 5px; 
+}
+
+.imagen-principal p {
+  font-size: 16px; 
+  color: #666; 
+}
+
+article {
+  margin-bottom: 20px; 
+}
+
+article h2 {
+  font-size: 20px; 
+  margin-bottom: 10px; 
+}
+
+article p {
+  font-size: 16px; 
+  line-height: 1.5; 
+}
+
+.imagen-secundaria {
+  border-radius: 10px; 
+  overflow: hidden; 
+  margin-bottom: 20px; 
+}
+
+.imagen-secundaria img {
+  width: 100%; 
+  height: auto; 
+}
+
+.seccion-equipo {
+  text-align: center; 
+}
+
+.seccion-equipo button {
+  background-color: #007bff; 
+  color: white; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 5px; 
+  font-size: 16px; 
+  cursor: pointer; 
+}
+
+footer {
+  background-color: #333; 
+  color: white; 
+  padding: 20px; 
+  text-align: center; 
+}
+
+footer img {
+  width: 150px; 
 }
