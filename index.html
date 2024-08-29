@@ -40,11 +40,17 @@
             font-size: 20px;
         }
 
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
         .team-member {
-            display: inline-block;
-            width: 150px;
-            text-align: center;
+            width: 45%;
             margin: 10px;
+            box-sizing: border-box;
+            text-align: center;
         }
 
         .team-member img {
@@ -53,7 +59,13 @@
             height: 100px;
             object-fit: cover;
             margin-bottom: 10px;
-        } 
+        }
+
+        @media (min-width: 768px) {
+            .team-member {
+                width: 20%; 
+            }
+        }
     </style>
 </head>
 <body>
