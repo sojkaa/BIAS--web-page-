@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+}
+
+.menu-icon, .settings-icon {
+    font-size: 24px;
+}
+
+.equipo, .proyecto {
+    padding: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.matrix-image img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    margin: 10px;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.team-member p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.team-member span {
+    font-size: 12px;
+    color: gray;
+}
+
+.bias-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.bias-logo img {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #00aaff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.project-details, .project-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project-details img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.project-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.subtitulo {
+    font-size: 18px;
+    color: #333;
+}
+
+.stars {
+    font-size: 24px;
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    font-size: 14px;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+    line-height: 1.6;
+}
