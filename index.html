@@ -1,184 +1,184 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto: BIAS</title>
-    <style>
-        /* Restablecer estilos predeterminados */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIAS - Silla de ruedas controlada por la mente</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-            color: #333;
-        }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
 
-        /* Contenedor principal */
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
 
-        /* Encabezado */
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
+    h1, h2, h3 {
+      font-weight: bold;
+    }
 
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
+    .team-member {
+      display: inline-block;
+      margin: 10px;
+      text-align: center;
+    }
 
-        /* Imagen destacada */
-        .featured-image {
-            margin-bottom: 20px;
-        }
+    .team-member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
 
-        .featured-image img {
-            width: 100%;
-            border-radius: 5px;
-        }
+    .orange-border {
+      border: 5px solid orange;
+      padding: 10px;
+    }
 
-        /* Sección de información */
-        .info-section {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
+    .green-button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
 
-        .info-section h2 {
-            font-size: 1.8em;
-            margin-bottom: 10px;
-        }
+    .feature-icon {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
 
-        /* Sección del equipo */
-        .team-section {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-        }
+    ul {
+      text-align: center;
+      list-style-type: none;
+      padding: 0;
+    }
 
-        .team-members {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+    li {
+      display: inline-block;
+      margin: 0 10px;
+    }
 
-        .team-member {
-            text-align: center;
-        }
+    /* Estilos para pantallas pequeñas */
+    @media screen and (max-width: 480px) {
+      .container {
+        padding: 10px;
+      }
 
-        .team-member img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 10px;
-        }
+      .team-member {
+        margin: 5px;
+      }
 
-        /* Llamado a la acción */
-        .cta-button {
-            display: inline-block;
-            background-color: #333;
-            color: #fff;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-
-        /* Diseño responsive */
-        @media (max-width: 768px) {
-            .team-members {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            }
-
-            .team-member img {
-                width: 100px;
-                height: 100px;
-            }
-        }
-    </style>
+      .team-member img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <!-- Sección: Proyecto BIAS -->
+    <h1>
+      Revolucionando la movilidad con BIAS
+    </h1>
+    <h2>
+      Silla de ruedas controlada por la mente
+    </h2>
+    <p>
+      Futurista, hecha por estudiantes del IMPA
+    </p>
+    <img src="imagenes/imagen1.png" alt="Silla de ruedas controlada por la mente">
 
-<header>
-    <h1>Proyecto: BIAS</h1>
-    <p>Silla de ruedas controlada por la mente</p>
-</header>
-
-<div class="container">
-
-    <div class="featured-image">
-        <img src="images/tn.image.PNG" alt="Equipo BIAS">
+    <!-- Sección: Logo BIAS -->
+    <div class="orange-border">
+      <img src="imagenes/logo_bias.png" alt="Logo BIAS">
     </div>
 
-    <div class="info-section">
-        <h2>¿Qué es BIAS?</h2>
-        <p>BIAS es un proyecto innovador que busca transformar la vida de personas con discapacidades motoras mediante sillas de ruedas controladas por señales EEG.</p>
-
-        <h2>¿Cómo funciona?</h2>
-        <p>Un dispositivo capta la actividad cerebral y la traduce en comandos, permitiendo a los usuarios dirigir la silla con sus pensamientos. Avanzar, girar o detenerse es posible, todo con la fuerza de la mente.</p>
-
-        <h2>¿Por qué elegimos este proyecto?</h2>
-        <p>Esta tecnología promete mayor independencia y una mejor calidad de vida para quienes enfrentan barreras de movilidad. Un futuro donde la mente lidera el camino está más cerca que nunca.</p>
-
-        <a href="#" class="cta-button">Contáctanos</a> 
+    <div>
+      <div>
+        <span class="feature-icon">⚡</span>
+        <h3>Innovadora</h3>
+        <p>Descubre el futuro de la movilidad, controla tu silla de ruedas sin esfuerzo con señales cerebrales y explora un nuevo reino de independencia y conveniencia.</p>
+        <ul>
+          <li>control</li>
+          <li>independencia</li>
+          <li>conveniencia</li>
+        </ul>
+      </div>
+      <div>
+        <span class="feature-icon">⏱️</span>
+        <h3>Automática</h3>
+        <p>Deja que tus señales cerebrales impulsen la silla de ruedas automáticamente. Disfruta de la facilidad y simplifica la navegación para un viaje más fluido.</p>
+        <ul>
+          <li>movimientos automáticos</li>
+          <li>cómoda de usar</li>
+        </ul>
+      </div>
+      <div>
+        <span class="feature-icon">🚀</span>
+        <h3>Sin esfuerzo</h3>
+        <p>Experimenta un movimiento sin esfuerzo mientras la silla de ruedas responde a la perfección a tus señales cerebrales. BIAS prioriza la comodidad y la eficiencia.</p>
+        <ul>
+          <li>tecnología responsable</li>
+          <li>control intuitivo</li>
+        </ul>
+      </div>
     </div>
+    <a href="#" class="green-button">Más Información</a>
 
-    <div class="team-section">
-        <h2>Miembros del equipo</h2>
-        <div class="team-members">
-            <div class="team-member">
-                <img src="images/sojka.jpg" alt="Santiago Sojka">
-                <h4>Santiago Sojka</h4>
-                <p>Diseño de estructura y Marketing</p>
-            </div>
-
-            <div class="team-member">
-                <img src="images/dani.jpg" alt="Danilo Diaz">
-                <h4>Danilo Diaz</h4>
-                <p>Trabajo en motores</p>
-            </div>
-
-            <div class="team-member">
-                <img src="images/lucho.jpg" alt="Luciano Montenegro">
-                <h4>Luciano Montenegro</h4>
-                <p>Líder</p>
-            </div>
-
-            <div class="team-member">
-                <img src="images/soria.jpg" alt="Ian Gil Soria">
-                <h4>Ian Gil Soria</h4>
-                <p>Diseño de placas</p>
-            </div>
-
-            <div class="team-member">
-                <img src="images/pela.jpg" alt="Luca Deblasi">
-                <h4>Luca Deblasi</h4>
-                <p>Programador de motores</p>
-            </div>
-
-            <div class="team-member">
-                <img src="images/fabi.jpg" alt="Nicolás Adel">
-                <h4>Nicolás Adel</h4>
-                <p>Programador de la IA</p>
-            </div>
-        </div>
+    <!-- Sección: Equipo -->
+    <h1>Conoce a nuestro equipo</h1>
+    <img src="imagenes/codigo_binario.png" alt="Código Binario">
+    <h2>Miembros del equipo</h2>
+    <div>
+      <div class="team-member">
+        <img src="imagenes/santiago.jpg" alt="Santiago Sojka">
+        <h3>Santiago Sojka</h3>
+        <p>Diseño de estructura y Marketing</p>
+      </div>
+      <div class="team-member">
+        <img src="imagenes/danilo.jpg" alt="Danilo Diaz">
+        <h3>Danilo Diaz</h3>
+        <p>Trabajo en motores</p>
+      </div>
+      <div class="team-member">
+        <img src="imagenes/luciano.jpg" alt="Luciano Montenegro">
+        <h3>Luciano Montenegro</h3>
+        <p>Líder</p>
+      </div>
+      <div class="team-member">
+        <img src="imagenes/ian.jpg" alt="Ian Gil Soria">
+        <h3>Ian Gil Soria</h3>
+        <p>Diseño de placas</p>
+      </div>
+      <div class="team-member">
+        <img src="imagenes/luca.jpg" alt="Luca Deblasi">
+        <h3>Luca Deblasi</h3>
+        <p>Programador de motores</p>
+      </div>
+      <div class="team-member">
+        <img src="imagenes/nicolas.jpg" alt="Nicolas Adell">
+        <h3>Nicolas Adell</h3>
+        <p>Programador de la IA</p>
+      </div>
     </div>
-
-</div>
-
+  </div>
 </body>
 </html>
