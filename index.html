@@ -3,64 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto BIAS</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Proyecto: BIAS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .star-rating {
+            color: #f39c12;
+            font-size: 20px;
+        }
+
+        .team-member {
+            display: inline-block;
+            width: 150px;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .team-member img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        } 
+    </style>
 </head>
 <body>
-    <!-- Sección de descripción del proyecto -->
-    <section id="proyecto">
-        <header>
-            <h1>Proyecto: BIAS</h1>
-        </header>
-        <div class="content">
-            <img src="images/tn.image.PNG" alt="Silla de ruedas automática">
-            <h2>Silla de ruedas Automática</h2>
-            <p><strong>Eficiente e innovador</strong></p>
-            <p>⭐⭐⭐⭐⭐</p>
-            <p><strong>Qué es BIAS?</strong></p>
-            <p>BIAS es un proyecto innovador que busca transformar la vida de personas con discapacidades motoras mediante sillas de ruedas controladas por señales EEG.</p>
-            <p><strong>Cómo funciona?</strong></p>
-            <p>Un dispositivo capta la actividad cerebral y la traduce en comandos, permitiendo a los usuarios dirigir la silla con sus pensamientos. Avanzar, girar o detenerse es posible, todo con la fuerza de la mente.</p>
-            <p><strong>Por qué elegimos este proyecto?</strong></p>
-            <p>Esta tecnología promete mayor independencia y una mejor calidad de vida para quienes enfrentan barreras de movilidad. Un futuro donde la mente lidera el camino está más cerca que nunca.</p>
-        </div>
-    </section>
 
-    <!-- Sección de miembros del equipo -->
-    <section id="equipo">
-        <h2>Miembros del equipo</h2>
-        <div class="team-container">
-            <div class="team-member">
-                <img src="images/sojka.jpg" alt="Santiago Sojka">
-                <h3>Santiago Sojka</h3>
-                <p>Diseño de estructura y Marketing</p>
-            </div>
-            <div class="team-member">
-                <img src="images/dani.jpg" alt="Danilo Diaz">
-                <h3>Danilo Diaz</h3>
-                <p>Trabajo en motores</p>
-            </div>
-            <div class="team-member">
-                <img src="images/lucho.jpg" alt="Luciano Montenegro">
-                <h3>Luciano Montenegro</h3>
-                <p>Líder</p>
-            </div>
-            <div class="team-member">
-                <img src="images/soria.jpg" alt="Ian Gil Soria">
-                <h3>Ian Gil Soria</h3>
-                <p>Diseño de placas</p>
-            </div>
-            <div class="team-member">
-                <img src="images/pela.jpg" alt="Luca Deblasi">
-                <h3>Luca Deblasi</h3>
-                <p>Programador de motores</p>
-            </div>
-            <div class="team-member">
-                <img src="images/fabi.jpg" alt="Nicolás Adell">
-                <h3>Nicolás Adell</h3>
-                <p>Programador de la IA</p>
-            </div>
+<div class="container">
+
+    <h1>Proyecto: BIAS</h1>
+
+    <img src="images/tn.image.PNG" alt="Equipo BIAS"> 
+
+    <h2>Silla de ruedas Automática</h2>
+
+    <p>Eficiente e innovador</p>
+
+    <div class="star-rating">
+        ★★★★★
+    </div>
+
+    <h3>¿Qué es BIAS?</h3>
+
+    <p>BIAS es un proyecto innovador que busca transformar la vida de personas con discapacidades motoras mediante sillas de ruedas controladas por señales EEG.</p>
+
+    <h3>¿Cómo funciona?</h3>
+
+    <p>Un dispositivo capta la actividad cerebral y la traduce en comandos, permitiendo a los usuarios dirigir la silla con sus pensamientos. Avanzar, girar o detenerse es posible, todo con la fuerza de la mente.</p>
+
+    <h3>¿Por qué elegimos este proyecto?</h3>
+
+    <p>Esta tecnología promete mayor independencia y una mejor calidad de vida para quienes enfrentan barreras de movilidad. Un futuro donde la mente lidera el camino está más cerca que nunca.</p>
+
+    <h2>Miembros del equipo</h2>
+
+    <div class="team-members">
+        <div class="team-member">
+            <img src="images/sojka.jpg" alt="Santiago Sojka">
+            <h4>Santiago Sojka</h4>
+            <p>Diseño de estructura y Marketing</p>
         </div>
-    </section>
+
+        <div class="team-member">
+            <img src="images/dani.jpg" alt="Danilo Diaz">
+            <h4>Danilo Diaz</h4>
+            <p>Trabajo en motores</p>
+        </div>
+
+        <div class="team-member">
+            <img src="images/lucho.jpg" alt="Luciano Montenegro">
+            <h4>Luciano Montenegro</h4>
+            <p>Líder</p>
+        </div>
+
+        <div class="team-member">
+            <img src="images/soria.jpg" alt="Ian Gil Soria">
+            <h4>Ian Gil Soria</h4>
+            <p>Diseño de placas</p>
+        </div>
+
+        <div class="team-member">
+            <img src="images/pela.jpg" alt="Luca Deblasi">
+            <h4>Luca Deblasi</h4>
+            <p>Programador de motores</p>
+        </div>
+
+        <div class="team-member">
+            <img src="images/fabi.jpg" alt="Nicolás Adel">
+            <h4>Nicolás Adel</h4>
+            <p>Programador de la IA</p>
+        </div>
+    </div>
+
+</div>
+
 </body>
 </html>
