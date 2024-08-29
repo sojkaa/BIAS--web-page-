@@ -1,74 +1,67 @@
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
     background-color: #f4f4f4;
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
-
-.project, .team {
+section {
     padding: 20px;
-    margin: 20px auto;
-    background: #fff;
-    max-width: 800px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: auto;
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.project-image {
+h1, h2, h3 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+/* Estilos de la sección del proyecto */
+#proyecto .content img {
     width: 100%;
-    max-width: 700px;
-    height: auto;
+    max-width: 600px;
     display: block;
-    margin: 0 auto 20px;
-    box-shadow: 0px 0px 20px #ADD8E6;
-}
-
-.wide-image {
-    width: 100%;
-    height: auto;
-    margin: 20px 0;
+    margin: 0 auto;
     border-radius: 10px;
 }
 
-h2, h3 {
-    color: #333;
+#proyecto .content {
     text-align: center;
 }
 
-.team-members {
+/* Estilos de la sección del equipo */
+.team-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.team-member {
     text-align: center;
+    margin: 10px;
+    width: 150px;
 }
 
-.member {
-    margin: 15px;
-    flex: 1 0 30%;
-}
-
-.member img {
+.team-member img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    margin-bottom: 10px;
 }
 
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+.team-member h3 {
+    margin: 10px 0 5px 0;
+    color: #333;
 }
 
-footer p {
+.team-member p {
     margin: 0;
+    color: #666;
 }
