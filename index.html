@@ -1,121 +1,85 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BIAS - Silla de Ruedas Controlada por la Mente</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Conocé a nuestro equipo</h1>
-            <img src="images/binary.PNG" alt="Fondo de matriz">
-        </div>
-    </header>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
 
-    <section class="team">
-        <div class="container">
-            <h2>Miembros del equipo</h2>
-            <div class="team-members">
-                <div class="member">
-                    <img src="images/sojka.jpg" alt="Santiago Sojka">
-                    <h3>Santiago Sojka</h3>
-                    <p>Diseño de estructura y Marketing</p>
-                </div>
-                <div class="member">
-                    <img src="images/dani.jpg" alt="Danilo Diaz">
-                    <h3>Danilo Diaz</h3>
-                    <p>Trabajo en motores</p>
-                </div>
-                <div class="member">
-                    <img src="images/lucho.jpg" alt="Luciano Montenegro">
-                    <h3>Luciano Montenegro</h3>
-                    <p>Líder</p>
-                </div>
-                <div class="member">
-                    <img src="images/soria.jpg" alt="Ian Gil Soria">
-                    <h3>Ian Gil Soria</h3>
-                    <p>Diseño de placas</p>
-                </div>
-                <div class="member">
-                    <img src="images/pela.jpg" alt="Luca Deblasi">
-                    <h3>Luca Deblasi</h3>
-                    <p>Programador de motores</p>
-                </div>
-                <div class="member">
-                    <img src="images/fabi.jpg" alt="Nicolas Adell">
-                    <h3>Nicolas Adell</h3>
-                    <p>Programador de la IA</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <title>Galileo Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
-    <section class="project-intro">
-        <div class="container">
-            <div class="project-logo">
-                <img src="images/LogoBIAS.png" alt="Logo BIAS">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#F9FAFA] group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+      <div class="flex items-center bg-[#F9FAFA] p-4 pb-2 justify-end">
+        <div class="flex w-12 items-center justify-end">
+          <button
+            class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 bg-transparent text-[#1C1D22] gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0"
+          >
+            <div class="text-[#1C1D22]" data-icon="X" data-size="24px" data-weight="regular">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                <path
+                  d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
+                ></path>
+              </svg>
             </div>
-            <div class="project-description">
-                <h3>Revolucionando la movilidad con BIAS</h3>
-                <h2>Silla de ruedas controlada por la mente</h2>
-                <p>Futurista, hecha por estudiantes del IMPA</p>
-            </div>
+          </button>
         </div>
-    </section>
-
-    <section class="features">
-        <div class="container">
-            <div class="feature">
-                <img src="icon-innovadora.png" alt="Icono Innovadora">
-                <h3>Innovadora</h3>
-                <p>Descubre el futuro de la movilidad, controla tu silla de ruedas sin esfuerzo con señales cerebrales y explora un nuevo reino de independencia y conveniencia.</p>
-                <p><strong>• control • independencia • conveniencia</strong></p>
+      </div>
+      <div class="flex p-4 @container">
+        <div class="flex w-full flex-col gap-4 items-start">
+          <div class="flex gap-4 flex-col items-start">
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32"
+              style='background-image: url("https://cdn.usegalileo.ai/sdxl10/4b9c4343-9884-4eb6-956d-def850698681.png");'
+            ></div>
+            <div class="flex flex-col justify-center">
+              <p class="text-[#1C1D22] text-[22px] font-bold leading-tight tracking-[-0.015em]">Dr. Sarah K. Ziegler</p>
+              <p class="text-[#3C3F4A] text-base font-normal leading-normal">Lead Research Scientist</p>
             </div>
-            <div class="feature">
-                <img src="icon-automatica.png" alt="Icono Automática">
-                <h3>Automática</h3>
-                <p>Deja que tus señales cerebrales impulsen la silla de ruedas, brindándote movimiento con facilidad y simplifica la navegación para un viaje más fluido.</p>
-                <p><strong>• movimientos automáticos • cómoda de usar</strong></p>
-            </div>
-            <div class="feature">
-                <img src="icon-sin-esfuerzo.png" alt="Icono Sin Esfuerzo">
-                <h3>Sin esfuerzo</h3>
-                <p>Experimenta un movimiento sin esfuerzo mientras la silla de ruedas responde a la perfección a tus señales cerebrales, lo que te permite moverte con facilidad.</p>
-                <p><strong>• tecnología responsable • control intuitivo</strong></p>
-            </div>
+          </div>
         </div>
-    </section>
-
-    <section class="project-details">
-        <div class="container">
-            <h3><img src="icon-location.png" alt="Icono Ubicación"> Proyecto: BIAS</h3>
-            <img src="project-image.jpg" alt="Imagen del proyecto">
-            <h2>Silla de ruedas Automática</h2>
-            <p>Eficiente e innovador</p>
-            <div class="rating">
-                <span>★★★★★</span>
-            </div>
-            <h3>Qué es BIAS?</h3>
-            <p>BIAS es un proyecto innovador que busca transformar la vida de personas con discapacidades motoras mediante sillas de ruedas controladas por señales EEG.</p>
-            <h3>Cómo funciona?</h3>
-            <p>Nuestro sistema capta la actividad cerebral y la traduce en comandos, permitiendo a los usuarios dirigir la silla con sus pensamientos. Avanzar, girar o detenerse es posible, todo con la fuerza de la mente.</p>
-            <h3>Por qué elegimos este proyecto?</h3>
-            <p>Creemos en un futuro con mayor independencia y una mejor calidad de vida para quienes enfrentan barreras de movilidad. Un futuro donde la mente lidera el camino está más cerca que nunca.</p>
-            <img src="news-image.jpg" alt="Imagen de noticia">
-            <a href="#" class="button">Nuestro equipo</a>
+      </div>
+      <p class="text-[#1C1D22] text-base font-normal leading-normal pb-3 pt-1 px-4">
+        Sarah is a Lead Research Scientist at BIAS. She has been working in the field of Brain-Computer Interfaces (BCIs) for over 10 years. She has published over 40 articles and
+        received numerous awards for her work.
+      </p>
+      <div class="flex w-full grow bg-[#F9FAFA] @container p-4">
+        <div class="w-full gap-1 overflow-hidden bg-[#F9FAFA] @[480px]:gap-2 aspect-[3/2] rounded-xl grid grid-cols-[2fr_1fr_1fr]">
+          <div
+            class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none row-span-2"
+            style='background-image: url("https://cdn.usegalileo.ai/sdxl10/ab90b79b-1752-479c-a120-012b361d8717.png");'
+          ></div>
+          <div
+            class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none"
+            style='background-image: url("https://cdn.usegalileo.ai/sdxl10/ea026a65-9aaf-4156-9f2b-519fedf9acb8.png");'
+          ></div>
+          <div
+            class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none"
+            style='background-image: url("https://cdn.usegalileo.ai/sdxl10/65d207de-b878-44e7-b1ae-8cd04807c48c.png");'
+          ></div>
+          <div
+            class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none"
+            style='background-image: url("https://cdn.usegalileo.ai/sdxl10/3d0b48a5-6f90-408e-a817-195b10f252ef.png");'
+          ></div>
+          <div
+            class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none"
+            style='background-image: url("https://cdn.usegalileo.ai/sdxl10/f54060d0-27f7-4866-8216-6fa9eda57781.png");'
+          ></div>
         </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="project-logo">
-                <img src="bias-logo.png" alt="Logo BIAS">
-            </div>
-            <a href="#" class="button">Más Información</a>
-        </div>
-    </footer>
-
-</body>
+      </div>
+      <div class="flex px-4 py-3">
+        <button
+          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 flex-1 bg-[#607AFB] text-[#F9FAFA] text-base font-bold leading-normal tracking-[0.015em]"
+        >
+          <span class="truncate">Connect with Sarah</span>
+        </button>
+      </div>
+      <div class="h-5 bg-[#F9FAFA]"></div>
+    </div>
+  </body>
 </html>
