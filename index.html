@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BIAS - Silla de ruedas controlada por la mente</title>
   <style>
-     body {
-      font-family: 'Roboto', sans-serif; /* Tipografía moderna */
+    body {
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4; /* Color de fondo neutro */
-      color: #333; /* Color de texto oscuro */
+      background-color: #f8f8f8; /* Fondo más claro */
+      color: #222; /* Color de texto más oscuro */
     }
 
     .container {
-      max-width: 800px; /* Ancho del contenedor */
+      max-width: 800px;
       margin: 0 auto;
-      padding: 30px; /* Espaciado */
+      padding: 30px; 
       text-align: center;
     }
 
@@ -24,50 +24,50 @@
       max-width: 100%;
       height: auto;
       border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-      transition: transform 0.3s ease; /* Transición suave */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease; 
     }
 
     img:hover {
-      transform: scale(1.05); /* Efecto hover */
+      transform: scale(1.05); 
     }
 
     .highlight {
-    background-color: black;
-    color: white;
-    padding: 2px 4px; /* Opcional: para añadir un poco de espacio alrededor del texto */
-    border-radius: 3px; /* Opcional: para redondear los bordes */
-}
+      background-color: #28a745; /* Verde más vivo */ 
+      color: white;
+      padding: 4px 8px; 
+      border-radius: 5px; 
+    }
 
-    h1,
-    h2,
-    h3 {
+    h1, h2, h3 {
       font-weight: bold;
     }
 
     h1 {
-      color: #28a745; /* Verde para el título principal */
-      margin-bottom: 20px; /* Espaciado */
+      color: #28a745;
+      margin-bottom: 20px; 
     }
 
     h2 {
-      color: #333;
-      margin-bottom: 10px;
+      color: #222;
+      margin-bottom: 10px; 
     }
 
     .team-member {
       display: inline-block;
-      margin: 20px;
+      margin: 20px; 
       text-align: center;
-      background-color: #fff; /* Fondo blanco para miembros */
-      padding: 20px;
+      background-color: #fff; 
+      padding: 20px; 
       border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
+      width: calc(33.33% - 40px); /* Ajusta el ancho de las columnas */
+      box-sizing: border-box; /* Incluye padding y border en el ancho */
     }
 
     .team-member:hover {
-      transform: translateY(-5px); /* Efecto hover */
+      transform: translateY(-5px); 
     }
 
     .team-member img {
@@ -79,29 +79,30 @@
     }
 
     .orange-border {
-      border: 5px solid orange;
-      padding: 30px; /* Espaciado para el logo */
-      margin: 20px 0; /* Espaciado alrededor del borde */
+      border: 5px solid #ffa500; /* Naranja más vibrante */
+      padding: 30px;
+      margin: 20px 0; 
       border-radius: 15px;
     }
 
     .green-button {
-      background-color: #28a745;
+      background-color: #28a745; 
       border: none;
       color: white;
-      padding: 15px 30px; /* Espaciado */
+      padding: 15px 30px; 
       text-align: center;
       text-decoration: none;
       display: inline-block;
-      font-size: 18px;
-      margin: 20px 0;
+      font-size: 18px; 
+      margin: 20px 0; 
       cursor: pointer;
       border-radius: 5px;
-      transition: background-color 0.3s ease; /* Transición suave */
+      transition: background-color 0.3s ease; 
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
     }
 
     .green-button:hover {
-      background-color: #218838; /* Efecto hover */
+      background-color: #218838; 
     }
 
     .feature-icon {
@@ -110,27 +111,42 @@
       color: #28a745;
     }
 
+    /* Ajustes para las tres columnas centrales */
+    .feature-container {
+      display: flex;
+      justify-content: center; /* Centra las columnas */
+      align-items: flex-start; /* Alinea los elementos al inicio */
+      flex-wrap: wrap; /* Permite que las columnas se ajusten en pantallas pequeñas */
+    }
+
+    .feature-item {
+      text-align: center;
+      margin: 20px; /* Espaciado entre columnas */
+      width: calc(33.33% - 40px); /* Ancho de cada columna */
+      box-sizing: border-box;
+    }
+
+
     ul {
       text-align: center;
       list-style-type: none;
-      padding: 0;
+      padding: 0; 
       margin-top: 10px;
     }
 
     li {
       display: inline-block;
-      margin: 0 15px;
+      margin: 0 15px; 
     }
 
-    /* Estilos para pantallas pequeñas */
     @media screen and (max-width: 480px) {
-
       .container {
         padding: 15px;
       }
 
       .team-member {
         margin: 10px;
+        width: 100%; /* Cada miembro ocupa todo el ancho en pantallas pequeñas */
       }
 
       .team-member img {
@@ -148,20 +164,26 @@
 
       .green-button {
         font-size: 16px;
-        padding: 10px 20px;
+        padding: 10px 20px; 
+      }
+
+      .feature-item {
+        width: 100%; /* Cada columna ocupa todo el ancho en pantallas pequeñas */
+        margin: 10px 0;
       }
     }
+
     .rating {
       display: inline-block;
       font-size: 20px;
-      color: #ffc107; /* Color amarillo para las estrellas */
+      color: #ffc107;
     }
     
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Sección: Proyecto BIAS -->
+
     <h1>
       Revolucionando la movilidad con BIAS
     </h1>
@@ -171,15 +193,14 @@
     <p>
       Futurista, hecha por estudiantes del IMPA
     </p>
-    <img src="images/.jpg" alt="Silla de ruedas controlada por la mente">
+    <img src="images/neurosky.jpg" alt="Silla de ruedas controlada por la mente">
 
-    <!-- Sección: Logo BIAS -->
     <div class="orange-border">
       <img src="images/LogoBIAS.png" alt="Logo BIAS">
     </div>
 
-    <div>
-      <div>
+    <div class="feature-container"> 
+      <div class="feature-item">
         <span class="feature-icon">⚡</span>
         <h3>Innovadora</h3>
         <p>Descubre el futuro de la movilidad, controla tu silla de ruedas sin esfuerzo con señales cerebrales y explora un nuevo reino de independencia y conveniencia.</p>
@@ -189,7 +210,7 @@
           <li class="highlight">conveniencia</li>
         </ul>
       </div>
-      <div>
+      <div class="feature-item">
         <span class="feature-icon">⏱️</span>
         <h3>Automática</h3>
         <p>Deja que tus señales cerebrales impulsen la silla de ruedas automáticamente. Disfruta de la facilidad y simplifica la navegación para un viaje más fluido.</p>
@@ -198,7 +219,7 @@
           <li class="highlight">cómoda de usar</li>
         </ul>
       </div>
-      <div>
+      <div class="feature-item">
         <span class="feature-icon">🚀</span>
         <h3>Sin esfuerzo</h3>
         <p>Experimenta un movimiento sin esfuerzo mientras la silla de ruedas responde a la perfección a tus señales cerebrales. BIAS prioriza la comodidad y la eficiencia.</p>
@@ -207,10 +228,10 @@
           <li class="highlight">control intuitivo</li>
         </ul>
       </div>
-    </div>
+    </div> 
+
     <a href="mas_información.html" class="green-button">Más Información</a>
 
-    <!-- Sección: Equipo -->
     <h1>Conoce a nuestro equipo</h1>
     <img src="images/binary.PNG" alt="Código Binario">
     <h2>Miembros del equipo</h2>
