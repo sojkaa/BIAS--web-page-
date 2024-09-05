@@ -1,142 +1,369 @@
-<!DOCTYPE html>
-<html lang="es">
+/*EStilo para el apartado de galeria*/ 
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BIAS - Proyecto: BIAS</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+@import url("https://api.fontshare.com/v2/css?f[]=archivo@100,200,300,400,500,600,700,800,900&f[]=clash-display@200,300,400,500,600,700&display=swap");
 
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-      text-align: center;
-    }
+:root {
+	--slide-width: min(25vw, 300px);
+	--slide-aspect: 2 / 3;
 
-    img {
-      max-width: 100%;
-      height: auto;
-    }
+	--slide-transition-duration: 800ms;
+	--slide-transition-easing: ease;
 
-    h1,
-    h2,
-    h3 {
-      font-weight: bold;
-    }
+	--font-archivo: "Archivo", sans-serif;
+	--font-clash-display: "Clash Display", sans-serif;
+}
 
-    .team-member {
-      display: inline-block;
-      margin: 10px;
-      text-align: center;
-    }
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 
-    .team-member img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
 
-    .orange-border {
-      border: 5px solid orange;
-      padding: 10px;
-    }
+body {
+	display: grid;
+	place-items: center;
+	overflow: hidden;
 
-    .green-button {
-      background-color: #4CAF50;
-      /* Green */
-      border: none;
-      color: white;
-      padding: 10px 20px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 10px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
+	background: rgba(0, 0, 0, 0.787);
+}
 
-    .feature-icon {
-      font-size: 30px;
-      margin-bottom: 10px;
-    }
+button {
+	border: none;
+	background: none;
+	cursor: pointer;
+	&:focus {
+		outline: none;
+		border: none;
+	}
+}
 
-    ul {
-      text-align: center;
-      list-style-type: none;
-      padding: 0;
-    }
+/* ------------------------------------------------ */
+/* -------------------- SLIDER -------------------- */
+/* ------------------------------------------------ */
 
-    li {
-      display: inline-block;
-      margin: 0 10px;
-    }
+.slider {
+	width: calc(3 * var(--slide-width));
+	height: calc(2 * var(--slide-height));
+	display: flex;
+	align-items: center;
+}
 
-    /* Estilos para pantallas pequeñas */
-    @media screen and (max-width: 480px) {
-      .container {
-        padding: 10px;
-      }
+.slider--btn {
+	--size: 40px;
 
-      .team-member {
-        margin: 5px;
-      }
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0.7;
+	transition: opacity 250ms cubic-bezier(0.215, 0.61, 0.355, 1);
+	z-index: 999;
 
-      .team-member img {
-        width: 80px;
-        height: 80px;
-      }
-    }
+	& svg {
+		width: var(--size);
+		height: var(--size);
+		stroke: white;
+	}
 
-    .rating {
-      display: inline-block;
-      font-size: 20px;
-      color: #ffc107;
-    }
-  </style>
-</head>
+	&:hover {
+		opacity: 1;
+	}
+}
 
-<body>
-  <div class="container">
-    <div>
-      <span class="material-symbols-outlined">
-        psychology
-      </span>
-      <h3>Proyecto: BIAS</h3>
-    </div>
-    <div class="image-container">
-      <img src="imagenes/proyecto_bias.png" alt="Imagen Proyecto BIAS">
-    </div>
-    <h1>Silla de ruedas Automática</h1>
-    <div class="rating">
-      ★★★★★ <span>Eficiente e innovador</span>
-    </div>
+.slides__wrapper {
+	width: 100%;
+	height: 100%;
 
-    <h3>¿Qué es BIAS?</h3>
-    <p>BIAS es un proyecto innovador que busca transformar la vida de personas con discapacidades motoras mediante
-      sillas de ruedas controladas por señales EEG.</p>
+	display: grid;
+	place-items: center;
 
-    <h3>¿Cómo funciona?</h3>
-    <p>Un dispositivo capta la actividad cerebral y la traduce en comandos, permitiendo a los usuarios dirigir la silla
-      con sus pensamientos. Avanzar, girar o detenerse es posible, todo con la fuerza de la mente.</p>
+	& > * {
+		grid-area: 1 / -1;
+	}
+}
 
-    <h3>¿Por qué elegimos este proyecto?</h3>
-    <p>Esta tecnología promete mayor independencia y una mejor calidad de vida para quienes enfrentan barreras de
-      movilidad. Un futuro donde la mente lidera el camino está más cerca que nunca.</p>
+.slides,
+.slides--infos {
+	width: 100%;
+	height: 100%;
 
-    <div class="image-container">
-      <img src="imagenes/estudiantes.png" alt="Imagen estudiantes">
-    </div>
+	pointer-events: none;
 
-    <a href="index.html" class="green-button">Nuestro equipo</a>
-  </div>
-</body>
+	display: grid;
+	place-items: center;
+	& > * {
+		grid-area: 1 / -1;
+	}
+}
 
-</html>
+/* ------------------------------------------------ */
+/* -------------------- SLIDE --------------------- */
+/* ------------------------------------------------ */
+
+.slide {
+	--slide-tx: 0px;
+	--slide-ty: 0vh;
+	--padding: 0px;
+	--offset: 0;
+
+	width: var(--slide-width);
+	height: auto;
+	aspect-ratio: var(--slide-aspect);
+	user-select: none;
+	perspective: 800px;
+
+	transform: perspective(1000px)
+		translate3d(var(--slide-tx), var(--slide-ty), var(--slide-tz, 0))
+		rotateY(var(--slide-rotY)) scale(var(--slide-scale));
+	transition: transform var(--slide-transition-duration)
+		var(--slide-transition-easing);
+}
+
+.slide[data-current] {
+	--slide-scale: 1.2;
+	--slide-tz: 0px;
+	--slide-tx: 0px;
+	--slide-rotY: 0;
+
+	pointer-events: auto;
+}
+
+.slide[data-next] {
+	--slide-tx: calc(1 * var(--slide-width) * 1.07);
+	--slide-rotY: -45deg;
+}
+
+.slide[data-previous] {
+	--slide-tx: calc(-1 * var(--slide-width) * 1.07);
+	--slide-rotY: 45deg;
+}
+
+.slide:not([data-current]) {
+	--slide-scale: 1;
+	--slide-tz: 0;
+	/* --slide-tx: calc(var(--offset) * var(--slide-width) * 1.05); */
+	/* --slide-rotY: calc(var(--dir) * -45deg); */
+
+	pointer-events: none;
+}
+
+.slide[data-current] {
+	& .slide--image {
+		filter: brightness(0.8);
+	}
+}
+
+.slide:not([data-current]) {
+	& .slide--image {
+		filter: brightness(0.5);
+	}
+}
+
+.slide__inner {
+	--rotX: 0;
+	--rotY: 0;
+	--bgPosX: 0%;
+	--bgPosY: 0%;
+
+	position: relative;
+	left: calc(var(--padding) / 2);
+	top: calc(var(--padding) / 2);
+	width: calc(100% - var(--padding));
+	height: calc(100% - var(--padding));
+	transform-style: preserve-3d;
+	transform: rotateX(var(--rotX)) rotateY(var(--rotY));
+}
+
+.slide--image__wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.slide--image {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	object-fit: cover;
+	transform: translate(-50%, -50%) scale(1.25)
+		translate3d(var(--bgPosX), var(--bgPosY), 0);
+	transition: filter var(--slide-transition-duration)
+		var(--slide-transition-easing);
+}
+
+.slide__bg {
+	position: fixed;
+	inset: -20%;
+	background-image: var(--bg);
+	background-size: cover;
+	background-position: center center;
+
+	z-index: -1;
+	pointer-events: none;
+
+	transition: opacity var(--slide-transition-duration) ease,
+		transform var(--slide-transition-duration) ease;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+	}
+
+	&::before {
+		background: rgba(0, 0, 0, 0.8);
+		backdrop-filter: blur(8px);
+	}
+
+	&:not([data-current]) {
+		opacity: 0;
+	}
+
+	&[data-previous] {
+		transform: translateX(-10%);
+	}
+
+	&[data-next] {
+		transform: translateX(10%);
+	}
+}
+
+/* ------------ SLIDE INFO ---------------- */
+
+.slide-info {
+	--padding: 0px;
+
+	position: relative;
+	width: var(--slide-width);
+	height: 100%;
+	aspect-ratio: var(--slide-aspect);
+	user-select: none;
+	perspective: 800px;
+	z-index: 100;
+}
+
+.slide-info[data-current] {
+	& .slide-info--text span {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+		transition-delay: 250ms;
+	}
+}
+
+.slide-info:not([data-current]) {
+	& .slide-info--text span {
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+		transition-delay: 0ms;
+	}
+}
+
+.slide-info__inner {
+	position: relative;
+	left: calc(var(--padding) / 2);
+	top: calc(var(--padding) / 2);
+	width: calc(100% - var(--padding));
+	height: calc(100% - var(--padding));
+	transform-style: preserve-3d;
+	transform: rotateX(var(--rotX)) rotateY(var(--rotY));
+}
+
+.slide-info--text__wrapper {
+	--z-offset: 45px;
+
+	position: absolute;
+	height: fit-content;
+	left: -15%;
+	bottom: 15%;
+	transform: translateZ(var(--z-offset));
+	z-index: 2;
+	pointer-events: none;
+}
+
+.slide-info--text {
+	font-family: var(--font-clash-display);
+	color: #fff;
+	overflow: hidden;
+
+	& span {
+		display: block;
+		white-space: nowrap;
+		transition: var(--slide-transition-duration) var(--slide-transition-easing);
+		transition-property: opacity, transform;
+	}
+
+	&[data-title],
+	&[data-subtitle] {
+		font-size: min(3cqw, 2.4rem);
+		font-weight: 800;
+		letter-spacing: 0.2cqw;
+		white-space: nowrap;
+		text-transform: uppercase;
+	}
+
+	&[data-subtitle] {
+		margin-left: 2cqw;
+		font-size: min(2.2cqw, 1.8rem);
+		font-weight: 600;
+	}
+
+	&[data-description] {
+		margin-left: 1cqw;
+		font-size: min(1.5cqw, 0.95rem);
+		font-family: var(--font-archivo);
+		font-weight: 300;
+	}
+}
+
+/* ------------------------------------------------ */
+/* -------------------- LOADER --------------------- */
+/* ------------------------------------------------ */
+
+.loader {
+	position: fixed;
+	inset: 0;
+
+	display: grid;
+	place-items: center;
+
+	background: #000;
+	z-index: 1000;
+
+	opacity: 1;
+	transition: opacity 0.5s ease-out;
+
+	.loader__text {
+		font-family: var(--font-clash-display);
+		font-size: clamp(2rem, 2vw, 5rem);
+		font-weight: 800;
+		color: #fff;
+	}
+}
+
+/* ------------------------------------------- */
+
+.support {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	padding: 10px;
+	display: flex;
+	a {
+		margin: 0 10px;
+		color: #fff;
+		font-size: 1.8rem;
+		backface-visibility: hidden;
+		transition: all 150ms ease;
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}
