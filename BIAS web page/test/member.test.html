@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ian Gil Soria</title>
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link rel="stylesheet" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?display=swap&family=Inter%3Awght%40400%3B500%3B700%3B900&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&family=Roboto:wght@400;700&display=swap">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style>
+    body {
+      font-family: 'Inter', 'Noto Sans', sans-serif;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .team-member {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+      padding: 2rem;
+    }
+
+    .team-member-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .team-member-image {
+      width: 100%;
+      height: auto;
+      border-radius: 1rem;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 1rem;
+      transition: transform 0.3s ease; /* Add transition for hover effect */
+    }
+
+    .image-grid img:hover {
+      transform: scale(1.05); /* Zoom on hover */
+    }
+
+    .team-member-name {
+      font-family: 'Roboto', sans-serif; /* Different font for name */
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .team-member-title {
+      font-weight: 500;
+      color: #607AFB; /* Brand color for title */
+    }
+
+    .team-member-description {
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .team-member {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#F9FAFA]">
+  <div class="container">
+    <article class="team-member">
+      <div class="team-member-info">
+        <div class="flex items-center gap-4">
+          <img src="../images/members/soria.jpg" alt="Ian Gil Soria" class="rounded-full w-24 h-24">
+          <div>
+            <h1 class="team-member-name text-[#1C1D22]">Ian Gil Soria</h1>
+            <p class="team-member-title text-[#3C3F4A]">Diseño de placas</p>
+          </div>
+        </div>
+        <p class="team-member-description text-[#1C1D22] text-base font-normal leading-normal">
+          Ian es nuestro diseñador de placas, responsable de asegurar la calidad y cumplimiento de estándares en los productos del proyecto. 
+        </p>
+        <a href="#" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 flex-1 bg-[#607AFB] text-[#F9FAFA] text-base font-bold leading-normal tracking-[0.015em]" aria-label="Connect with Ian">
+          <span class="truncate">Conéctate con Ian</span>
+        </a>
+      </div>
+      <figure class="image-grid">
+        <img src="https://cdn.usegalileo.ai/sdxl10/ab90b79b-1752-479c-a120-012b361d8717.png" alt="Image 1" class="team-member-image">
+        <img src="https://cdn.usegalileo.ai/sdxl10/ea026a65-9aaf-4156-9f2b-519fedf9acb8.png" alt="Image 2" class="team-member-image">
+        <img src="https://cdn.usegalileo.ai/sdxl10/65d207de-b878-44e7-b1ae-8cd04807c48c.png" alt="Image 3" class="team-member-image">
+        <img src="https://cdn.usegalileo.ai/sdxl10/3d0b48a5-6f90-408e-a817-195b10f252ef.png" alt="Image 4" class="team-member-image">
+        <img src="https://cdn.usegalileo.ai/sdxl10/f54060d0-27f7-4866-8216-6fa9eda57781.png" alt="Image 5" class="team-member-image">
+        <img src="https://cdn.usegalileo.ai/sdxl10/f54060d0-27f7-4866-8216-6fa9eda57781.png" alt="Image 5" class="team-member-image">
+      </figure>
+    </article>
+  </div>
+</body>
+</html>
