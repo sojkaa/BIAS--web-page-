@@ -1,0 +1,19 @@
+.info-block {
+    width: 200px;
+    height: 100px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 20px;
+    position: relative; /* For positioning the content inside */
+    transition: height 0.3s ease-in-out; /* Add a transition for smooth animation */
+    overflow: hidden; /* Hide content outside of the block */
+  }
+  
+  .info-block.show {
+    height: 150px; /* The height when expanded */
+  }
+  
+  .info-block p {
+    margin: 0;
+  }
