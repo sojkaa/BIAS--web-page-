@@ -1,6 +1,4 @@
-# Página Web
-
-<img src="images/LogoBIAS.nobckg.png" alt="Imagen de la Página Web" width="800" height="400">
+<img src="images/LogoBIAS.nobckg.png" alt="Imagen de la Página Web" width="800" height="300">
 
 Este repositorio contiene el código fuente de la página web del proyecto BIAS.
 
