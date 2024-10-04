@@ -17,7 +17,6 @@ Este repositorio contiene el código fuente de la página web del proyecto BIAS.
 * `css/`: carpeta con estilos CSS
 * `js/`: carpeta con archivos JavaScript
 * `img/`: carpeta con imágenes
-* `assets/`: carpeta con recursos adicionales
 
 
 ### Autor
